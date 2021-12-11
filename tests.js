@@ -4,34 +4,34 @@ const expect = chai.expect
 describe('ES6 Classes Assignment', () => {
   describe('Your Sweet \'88 Pontiac Fiero', () => {
     after(() => logSpy.restore())
-    it('should have been declared as "mySweetRide"', () => {
-      expect(mySweetRide).to.exist
+    it('should have been declared as "myMuscleCar"', () => {
+      expect(myMuscleCar).to.exist
     })
     it('should come from Car class', () => {
-      expect(mySweetRide instanceof Car).to.be.true
+      expect(myMuscleCar instanceof Car).to.be.true
     })
     it('should have "make" property', () => {
-      expect(mySweetRide).to.have.property('make')
+      expect(myMuscleCar).to.have.property('make')
     })
     it('should have "make" property of "Pontiac"', () => {
-      expect(mySweetRide.make.toLowerCase()).to.eq('pontiac')
+      expect(myMuscleCar.make.toLowerCase()).to.eq('pontiac')
     })
     it('should have "model" property', () => {
-      expect(mySweetRide).to.have.property('model')
+      expect(myMuscleCar).to.have.property('model')
     })
     it('should have "model" property of "Fiero"', () => {
-      expect(mySweetRide.model.toLowerCase()).to.eq('fiero')
+      expect(myMuscleCar.model.toLowerCase()).to.eq('fiero')
     })
     it('should have "year" property', () => {
-      expect(mySweetRide).to.have.property('year')
+      expect(myMuscleCar).to.have.property('year')
     })
     it('should have "year" property of 1988', () => {
-      expect(mySweetRide.year).to.eq(1988)
+      expect(myMuscleCar.year).to.eq(1988)
     })
     it('should be a 1988 pontiac fiero', () => {
-      expect(mySweetRide.make.toLowerCase()).to.eq('pontiac')
-      expect(mySweetRide.model.toLowerCase()).to.eq('fiero')
-      expect(mySweetRide.year).to.eq(1988)
+      expect(myMuscleCar.make.toLowerCase()).to.eq('pontiac')
+      expect(myMuscleCar.model.toLowerCase()).to.eq('fiero')
+      expect(myMuscleCar.year).to.eq(1988)
     })
     it('should have been honked once before maintenance', () => {
       expect(logSpy.firstCall.args[0].toLowerCase()).to.eq('beep beep!')
